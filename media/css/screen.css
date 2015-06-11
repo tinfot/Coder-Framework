@@ -1,0 +1,423 @@
+/* --- Simple Reset --- */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: arial, sans-serif;
+	font-size: 1.0em;
+}
+
+a img {
+	border: none;
+}
+
+.clear{clear:both;}
+
+html {
+	height: 100%;
+}
+
+ul li {
+	margin-left: 20px;
+}
+
+a {
+	color: #000;
+}
+
+
+/* --- Layout settings --- */
+
+body {
+	background-color: #202c22;
+	background-image: url(../img/bg.png);
+	background-position: 0 60px;
+	background-repeat: repeat-x;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+address {
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #999;
+}
+
+#canvas {
+	width: 809px;
+	margin: 0 auto;
+	background-image: url(../img/content-bg.png);
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+/* --- Header settings --- */
+
+#header {
+	position: absolute;
+	margin: 40px auto 0 auto;
+	top: 0;
+	left: 0;
+	height: 113px;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+#header h1 {
+	height: 96px;
+}
+
+#header h1 a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* --- Navigation menu settings --- */
+
+#menu {
+	position: absolute;
+	list-style-type: none;
+	margin: 200px 0 0 -25px;
+	padding: 10px;
+	float: left;
+	width: 160px;
+	height: 500px;
+	
+}
+
+#menu li {
+	margin: 5px 5px;
+	
+	height: 50px;
+	width: 158px;
+	text-align: right;
+}
+
+#menu li a {
+	display: block;
+	color: #93842b;
+	text-decoration: none;
+	height: 50px;
+	width: 138px;
+	line-height: 36px;
+	padding-right: 20px;
+	background-image: url(../img/menu-button.png);
+	background-repeat: no-repeat;
+}
+
+#menu li a:hover {
+	text-decoration: underline;
+	background-image: url(../img/menu-button-active.png);
+	color: #cfe8d3;
+}
+
+body.home #menu li.home a,
+body.menu #menu li.menu a,
+body.contact #menu li.contact a,
+body.login #menu li.login a,
+body.logout #menu li.logout a,
+body.myprofile #menu li.myprofile a,
+body.register #menu li.register a {
+	background-image: url(../img/menu-button-active.png);
+	color: #cfe8d3;
+}
+
+/* --- Content settings --- */
+
+#content {
+	margin: 140px 20px 50px 160px;
+	padding: 20px;
+	font-size: 0.9em;
+	min-height: 400px;
+}
+
+#content * {
+	line-height: 1.5em;
+}
+
+#content p {
+	margin: 10px 0;
+}
+
+#content .picture {
+	margin: 10px;
+}
+
+#content .picture.left {
+	float: left;
+}
+
+#content .picture.right {
+	float: right;
+}
+
+#content .picture.full {
+	margin: 0;
+}
+
+/* Classes for feedback messages */
+
+#content .message_ok {
+	background-color: #e8ffd8;
+	border: 1px solid #006d00;
+	padding: 5px 10px;
+	width: 365px;
+}
+
+#content .message_error {
+	background-color: #ffd8d8;
+	border: 1px solid #e50000;
+	padding: 5px 10px;
+	width: 365px;
+}
+
+/* --- Heading settings --- */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, serif;
+	color: #b09c30;
+}
+
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+	color: #b09c30;
+}
+
+h1 {
+	text-shadow: 1px 1px 1px #222;
+}
+
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.3em;
+	width: 100%;
+	border-bottom: 2px solid #b09c30;
+}
+
+/* --- Footer settings --- */
+
+#footer {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+	background-image: url(../img/footer-bg.png);
+	background-repeat: no-repeat;
+	background-position: 0 top;
+	background-color: #202c22;
+	padding: 20px 0 20px 0;
+	color: #97862b;
+}
+
+/* --- Sidebar settings --- */
+
+#sidebar {
+	position: absolute;
+	padding: 10px 10px 20px 10px;
+	margin-left: 430px;
+	width: 150px;
+	background-repeat: no-repeat;
+	background-color: #202c22;
+}
+
+#sidebar a {
+	color: #cfe8d3;
+}
+
+#sidebar ul {
+	margin-top: 10px;
+	list-style-type: square;
+	color: #cfe8d3;
+}
+
+#sidebar.fixed {
+	position: fixed;
+	top: 20px;
+}
+
+/* --- Form settings --- */
+
+#content .required {
+	color: #93842b;
+	cursor: help;
+}
+
+#content fieldset {
+	border: 0;
+	width: 355px;
+	padding: 20px 15px 10px 15px;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+#content fieldset.input {
+	background-color: #f5f5f5;
+	border-top: 1px solid #999;
+}
+
+#content fieldset .text {
+	height: 40px;
+	clear: both;
+}
+
+#content fieldset .text input
+{
+	width: 190px;
+	padding: 2px 3px;
+	margin-bottom: 2px;
+	border: 1px solid;
+	border-color: #777 #EEE #EEE #777;
+}
+
+#content fieldset .text select {
+	width: 200px;
+	margin-bottom: 2px;
+}
+
+#content #ratingform fieldset .text input {
+	width: 65px;
+}
+
+#content fieldset .text label {
+	display: block;
+	width: 130px;
+	float: left;
+	line-height: 1.6em;
+}
+
+#content #ratingform fieldset .text label {
+	width: 210px;
+}
+
+#content #ratingform fieldset .text select {
+	width: 140px;
+}
+
+#content fieldset #rating_captcha.text img {
+	vertical-align: bottom;
+}
+
+#content fieldset .text textarea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	width: 190px;
+	padding: 2px 3px;
+	border: 1px solid;
+	border-color: #777 #EEE #EEE #777;
+}
+
+#content fieldset .text input:focus {
+	background-color: #fffeec;
+}
+
+#content #ratingform fieldset .text .message {
+	padding-left: 210px;
+}
+
+#content fieldset .text .message {
+	font-size: 0.7em;
+	color: #999;
+	display: block;
+	padding-left: 130px;
+}
+
+#content fieldset .submit .message {
+	font-size: 0.7em;
+	color: #999;
+	padding-left: 130px;
+}
+
+#content #tags-wrapper  .message  {
+	font-size: 0.7em;
+	color: #999;	
+	display: inline;
+	padding-left: 10px;
+}
+
+#content fieldset .text.error input,
+#content fieldset .text.error textarea {
+	background-color: #fff7f7;
+}
+
+#content  .text.error .message,
+#content .message.error, 
+#content fieldset .text.error label,
+#content fieldset .text.error .message {
+	color: #ae1d1d !important;
+}
+
+#content fieldset .reset input {
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	padding: 2px 5px 3px 5px;
+}
+
+#content fieldset.submit {
+	/*float: left;*/
+	border: 0;
+	padding-top: 10px;
+}
+
+#content fieldset .submit input {
+	margin-left: 130px;
+	background-color: #93842b;
+	color: white;
+	padding: 2px 5px 3px 5px;
+	border: 1px solid #0c4059;
+	background-position: top left;
+	background-repeat: repeat-x;
+	cursor: pointer;
+}
+
+#content fieldset .submit input:hover {
+	text-decoration: underline;
+}
+
+/* --- Food settings --- */
+
+#foods {
+	width: 400px;
+}
+
+#foods .food, 
+#foods  div.category, 
+#tags-wrapper.category{
+	background-color: #f5f5f5;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+#foods li, 
+#tags-wrapper li{
+	font-family: Georgia, serif;
+	color: #b09c30;
+	list-style-type: square;
+}
+
+.food h3 {
+	float: left;
+}
+
+.food span, .comment span {
+	float: left;
+	margin: 0 10px;
+}
+
+.food_image, .foodcategory_image {
+	clear: both;
+	margin: 10px 0;
+}
+
+.tag {
+	display: inline;
+}
+
